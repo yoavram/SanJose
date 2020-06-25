@@ -27,6 +27,7 @@ class ddeVar:
         self.itpr.x = np.hstack([self.itpr.x, [t]])
         Y2 = Y if (Y.size==1) else np.array([Y]).T
         self.itpr.y = np.hstack([self.itpr.y, Y2])
+        self.itpr._y = self.itpr._reshape_yi(self.itpr.y) # hack required for y.ndim>1
         self.itpr.fill_value = Y
          
          
@@ -69,10 +70,8 @@ def ddeint(func, g, tt, fargs=None):
     dde_ = dde(func)
     dde_.set_initial_value(ddeVar(g, tt[0]))
     dde_.set_f_params(fargs if fargs else [])
-    # v = [g(tt[0])] + [
     v = [ 
-        dde_.integrate(dde_.t + dt).ravel()
+        dde_.integrate(dde_.t + dt)
         for dt in np.diff(tt)
     ]
-    # return np.array(v)
-    return np.array([g(tt[0])] + [x[0] for x in v])
+    return np.array([g(tt[0])] + v)
