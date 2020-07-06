@@ -9,7 +9,7 @@ This repository includes Python source code and Jupyter notebooks that reproduce
 - [SIR model](notebooks/model-SIR.ipynb): source code for reproduction of SIR model results.
  
 
-The source code uses [zulko/ddeint](https://github.com/Zulko/ddeint) to solve delayed differential equations.
+The source code uses [Zulko/ddeint](https://github.com/Zulko/ddeint) to solve delayed differential equations.
 
 ### License
 
