@@ -1,7 +1,7 @@
 Source code for analysis and figure reproduction for
 
 # Adaptive social contact rates induce complex dynamics during epidemics
-by Ronan F. Arthur, James H. Jones, Matthew H. Bonds, [Yoav Ram](http://www.yoavram.com), Marcus W. Feldman
+by Ronan F. Arthur, James H. Jones, Matthew H. Bonds, [Yoav Ram](http://www.yoavram.com), Marcus W. Feldman (2021) PLOS Computational Biology, DOI:10.1371/journal.pcbi.1008639
 
 Preprint available on [bioRxiv](https://www.biorxiv.org/content/10.1101/2020.04.14.028407).
 
